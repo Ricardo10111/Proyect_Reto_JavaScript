@@ -119,6 +119,14 @@ document.addEventListener("DOMContentLoaded", () => {
     inputDate.min = "2020-01-01";
     inputDate.max = "2025-01-01";
     formulario.appendChild(inputDate);
+
+    const space6 = document.createElement("br");
+    formulario.appendChild(space6);
+
+    const buttomSubmit =document.createElement('input')
+    buttomSubmit.type = 'submit'
+    buttomSubmit.value = 'Enviar'
+    formulario.appendChild(buttomSubmit);
   
     // const inputHashtags = document.createElement("input");
     // inputHashtags.type = "checkbox";
