@@ -71,6 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
        if (usuerFind) {
           //Reemplazamos el usuario existente por el nuevo
           users[users.indexOf(usuerFind)]=data;
+          //Eliminar
+        //   delete usuerFind.name
           //Le  damos nuevo nombre al usuario existente
           usuerFind.name = data.name
           //Nos modifica  la info del usuario y se lo pasamos  al localstorage
