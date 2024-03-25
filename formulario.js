@@ -1,9 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  /**
-   *
-   *  Formulario
-   *
-   */
   const mainContainer = document.querySelector('body')
   // Crear form y agragarlo al body
   const formulario = document.createElement('form')
@@ -38,31 +33,30 @@ document.addEventListener('DOMContentLoaded', () => {
   formulario.appendChild(space1)
 
   const selectReaction = document.createElement('select')
-  selectReaction.name = 'reacciones'
   formulario.appendChild(selectReaction)
 
   const loveReaction = document.createElement('option')
-  loveReaction.value = '❤️'
+  loveReaction.value = 'love'
   loveReaction.textContent = '❤️'
   selectReaction.appendChild(loveReaction)
 
   const ponyReaction = document.createElement('option')
-  ponyReaction.value = '🦄'
+  ponyReaction.value = 'Pony'
   ponyReaction.textContent = '🦄'
   selectReaction.appendChild(ponyReaction)
 
   const wowReaction = document.createElement('option')
-  wowReaction.value = '🤯'
+  wowReaction.value = 'Wow'
   wowReaction.textContent = '🤯'
   selectReaction.appendChild(wowReaction)
 
   const fireReaction = document.createElement('option')
-  fireReaction.value = '🚀'
+  fireReaction.value = 'Fire'
   fireReaction.textContent = '🚀'
   selectReaction.appendChild(fireReaction)
 
   const awsomeReaction = document.createElement('option')
-  awsomeReaction.value = '🙌'
+  awsomeReaction.value = 'Awsome'
   awsomeReaction.textContent = '🙌'
   selectReaction.appendChild(awsomeReaction)
 
@@ -70,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
   formulario.appendChild(space2)
 
   const selectHashtags = document.createElement('select')
-  selectHashtags.name = 'hashtags'
   formulario.appendChild(selectHashtags)
 
   const firstHash = document.createElement('option')
@@ -134,35 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
   buttomSubmit.type = 'submit'
   buttomSubmit.value = 'Enviar'
   formulario.appendChild(buttomSubmit)
-
-  /**
-   *
-   *  Array para aser los post
-   *
-   */
-
-  const form = document.querySelector('#crud')
-  form.addEventListener('submit', (event) => {
-    event.preventDefault()
-    const users = JSON.parse(localStorage.getItem('users')) ?? []
-    const formData = new FormData(form)
-    const entries = formData.entries()
-    const data = Object.fromEntries(entries)
-    const id = formData.get('id')
-    data.languages = formData.getAll('languages')
-
-    if (!id) {
-      data.id = users.length + 1
-      users.push(data)
-      const jsonString = JSON.stringify(users)
-      localStorage.setItem('users', jsonString)
-    } else {
-      //Buscar usuario por ID
-      let userFind = users.find((user) => (user.id = data.id))
-      //Reemplazar datos formulario en el usuario encontrado
-      if (userFind.id) console.log(users)
-    }
-  })
 
   // const inputHashtags = document.createElement("input");
   // inputHashtags.type = "checkbox";

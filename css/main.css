@@ -608,7 +608,7 @@ html {
   font-size: 18px;
 }
 
-.mainContainerPostOne {
+#mainBox {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -618,209 +618,39 @@ html {
   border: rgb(228, 225, 228) 2px solid;
   border-radius: 10px;
   padding-bottom: 20px;
+  margin: 20px;
+  position: relative;
   width: 100%;
   margin-bottom: 10px;
 }
 
-.navMainContent {
+#descriptionContent {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 1em;
-  border-radius: 10px;
-  padding: 10px;
-}
-.navMainContent li {
-  list-style: none;
-  padding: 10px;
-  background-color: transparent;
-}
-.navMainContent li:hover {
-  background-color: rgb(255, 255, 255);
-  border-radius: 15%;
-  color: rgb(57, 57, 228);
-  cursor: pointer;
-}
-
-.imagePostOne {
-  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
-.imagePostOne .bigImage {
-  padding: 0;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-.postOneTop {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 9px;
-  margin-bottom: 8px;
-  margin-left: 20px;
-  /*margin-bottom: 20px;*/
-}
-
-.authorPostOne {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  font-size: 20px;
-  gap: 10px;
-}
-.authorPostOne .image .authorPostOne_href imh {
-  height: 32px;
-  width: 32px;
-}
-.authorPostOne .avatarImagePostOne {
-  display: inline-block;
-  border-radius: 100%;
-  position: relative;
-  width: 40px;
-  height: 40px;
-  overflow: hidden;
-  vertical-align: middle;
-}
-.authorPostOne .authorNamePostOne {
-  display: inline-block;
-  margin-bottom: 0;
-  position: relative;
-  font-weight: bold;
-  font-size: 17px;
-  text-decoration: none;
-  color: #000;
-}
-
-.postOneBottom {
-  padding-left: 40px;
-}
-.postOneBottom .mainContentTitle h2 {
-  font-size: 1.25rem;
-}
-.postOneBottom .mainContentTitle h2 a {
-  text-align: justify;
-  text-decoration: none;
-  color: black;
-}
-.postOneBottom .mainContentTitle h2 a:hover {
-  color: rgb(57, 57, 228);
-  cursor: pointer;
-}
-.postOneBottom .tagsPostOne {
-  margin-bottom: 17px;
-  margin-left: 10px;
-  font-size: small;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  color: rgb(59, 57, 57);
-  text-decoration: none;
-}
-.postOneBottom .tagsPostOne .news {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  height: 30px;
-  min-width: 70px;
-  text-decoration: none;
-  color: black;
-}
-.postOneBottom .tagsPostOne .news:hover {
-  background-color: rgba(86, 39, 101, 0.1);
-  border-radius: 4px;
-  border: 1px solid #2d2a2a;
-}
-
-.engagementsPostOne {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.875rem;
 }
-.engagementsPostOne .emojisAndComments {
+
+#sectionContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
-  align-content: center;
-  margin-left: 10px;
-}
-.engagementsPostOne .emojisAndComments .emojis {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  margin-left: 0.5rem;
-  height: 40px;
-  width: 167px;
-}
-.engagementsPostOne .emojisAndComments .emojis .insideEmoji {
-  margin: -6px;
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  border: 2px solid rgb(255, 255, 255);
-  background-color: rgb(245, 245, 245);
-}
-.engagementsPostOne .emojisAndComments .emojis .reactionCounter {
-  margin-left: 0.5rem;
-}
-.engagementsPostOne .emojisAndComments .emojis .reactionCounter .reactionCounter_2 {
-  display: none;
-}
-.engagementsPostOne .emojisAndComments .emojis:hover {
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.035);
-  border-radius: 0.375rem;
-}
-.engagementsPostOne .emojisAndComments .commentsPostOneDiv {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  margin-left: 0.5rem;
-  height: 40px;
-  width: 40px;
-}
-.engagementsPostOne .emojisAndComments .commentsPostOneDiv .commentsPostOne {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.9em;
-}
-.engagementsPostOne .emojisAndComments .commentsPostOneDiv .commentsPostOne .crayons-icon {
-  margin-right: 5px;
-}
-.engagementsPostOne .emojisAndComments .commentsPostOneDiv .commentsPostOne .commentsPostOneBottom {
-  display: inline;
-  font-size: 0.9em;
-  display: none;
-}
-.engagementsPostOne .emojisAndComments .commentsPostOneDiv:hover {
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.035);
-  border-radius: 0.375rem;
-}
-.engagementsPostOne .savePostOneBottom {
-  display: flex;
-  align-items: center;
-}
-.engagementsPostOne .savePostOneBottom p {
-  margin-right: 15px;
-  font-size: 0.9em;
-}
-.engagementsPostOne .savePostOneBottom button {
-  padding: 2px;
-  background-color: white;
-  border: none;
+  padding: 20px;
+  gap: 2em;
 }
 
-.nameDate p {
-  font-size: 10px;
+#btnDelete {
+  width: 10em;
+  height: 2em;
+}
+
+#btnDeleteConteiner {
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
 }
 
 body {

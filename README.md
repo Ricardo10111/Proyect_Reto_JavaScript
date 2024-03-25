@@ -10,6 +10,6 @@ Repository for the javascript challenge
     - crear un botón que diga 'delete' y que esté enlazado a nuestro punto 1 sección B
 5. Ponerle estilo a los posts (Maria)
 6. Filtrado por fechas (Todos 24/3 ++++ Aldo*)
-7. Unir punto 3 y 4 (Ricardo muahaha)
+7. Unir punto 3 y 4 (Ricardo muahahahahahaha)
 
 
