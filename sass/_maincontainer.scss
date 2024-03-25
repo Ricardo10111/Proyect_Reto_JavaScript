@@ -287,6 +287,18 @@
 
 // }
 
-.mainbox {
-    width: 10px;
+#mainBox {
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        font-family: "Roboto", sans-serif;
+        background-color: white;
+        border: rgb(228, 225, 228) 2px solid;
+        border-radius: 10px;
+        padding-bottom: 20px;
+        margin: 20px;
+        position: relative;
+        width: 100%;
+        margin-bottom: 10px;
 }
