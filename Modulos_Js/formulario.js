@@ -1,3 +1,4 @@
+// import { functionCrear } from './Funcion-Post'
 document.addEventListener('DOMContentLoaded', () => {
   /**
    *
@@ -6,13 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   const mainContainer = document.querySelector('body')
   // Crear form y agragarlo al body
+  const divContainer = document.createElement('div')
+  divContainer.id = 'divContainer'
+  mainContainer.append(divContainer)
   const formulario = document.createElement('form')
   formulario.id = 'crud'
-  mainContainer.append(formulario)
+  divContainer.append(formulario)
 
   const inputID = document.createElement('input')
   inputID.type = 'text'
-  inputID.name = 'ID'
+  inputID.name = 'id'
   inputID.placeholder = 'ID'
   formulario.appendChild(inputID)
 
@@ -137,43 +141,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /**
    *
-   *  Array para aser los post
+   *  Array para hacer los post
    *
    */
-
   const form = document.querySelector('#crud')
   form.addEventListener('submit', (event) => {
     event.preventDefault()
-    const users = JSON.parse(localStorage.getItem('users')) ?? []
+    const posts = JSON.parse(localStorage.getItem('posts')) ?? []
     const formData = new FormData(form)
-    const entries = formData.entries()
-    const data = Object.fromEntries(entries)
+    const data = Object.fromEntries(formData.entries())
     const id = formData.get('id')
-    data.languages = formData.getAll('languages')
 
-    if (!id) {
-      data.id = users.length + 1
-      users.push(data)
-      const jsonString = JSON.stringify(users)
-      localStorage.setItem('users', jsonString)
+    if (id) {
+      const index = posts.findIndex((post) => post.id === parseInt(id))
+      if (index !== -1) {
+        posts[index] = { ...posts[index], ...data }
+        localStorage.setItem('posts', JSON.stringify(posts))
+        alert('Post modificado exitosamente')
+        location.reload()
+      } else {
+        alert('No se encontró ningún Post con el ID proporcionado')
+        location.reload()
+      }
     } else {
-      //Buscar usuario por ID
-      let userFind = users.find((user) => (user.id = data.id))
-      //Reemplazar datos formulario en el usuario encontrado
-      if (userFind.id) console.log(users)
+      data.id = posts.length + 1
+      posts.push(data)
+      localStorage.setItem('posts', JSON.stringify(posts))
+      alert('Post añadido exitosamente')
+      location.reload()
     }
   })
-
-  // const inputHashtags = document.createElement("input");
-  // inputHashtags.type = "checkbox";
-  // inputHashtags.id = "#programmong";
-  // inputHashtags.name = "#programming";
-  // inputHashtags.value = "#programming";
-  // inputDescription.textContent = "#programming";
-  // formulario.appendChild(inputHashtags);
-  // const labelInputHash = document.createElement("label");
-  // labelInputHash.for = "#programming";
-  // labelInputHash.textContent = "#programming";
 })
-
-// 🦄

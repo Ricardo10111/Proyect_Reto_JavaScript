@@ -1,0 +1,19 @@
+#divContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 10em;
+}
+#crud{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border: rgb(228, 225, 228) 2px solid;
+    flex-direction: column;
+    height: 30em;
+    width: 30em;
+    border-radius: 10px;
+    
+}
