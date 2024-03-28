@@ -164,6 +164,7 @@
   margin: 0;
   display: flex;
   flex-direction: column;
+  margin-right: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -608,18 +609,16 @@ html {
   font-size: 18px;
 }
 
-.mainContainerPostOne {
+.headerPosts {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-content: center;
-  font-family: "Roboto", sans-serif;
-  background-color: white;
-  border: rgb(228, 225, 228) 2px solid;
-  border-radius: 10px;
-  padding-bottom: 20px;
-  width: 100%;
-  margin-bottom: 10px;
+  align-items: center;
+  gap: 5em;
+}
+
+#calendar {
+  height: 3em;
+  width: 20em;
 }
 
 .navMainContent {
@@ -642,123 +641,66 @@ html {
   cursor: pointer;
 }
 
-.imagePostOne {
+.mainBox {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center;
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+  border: rgb(228, 225, 228) 2px solid;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  margin: 20px;
+  position: relative;
   width: 100%;
+  margin-bottom: 10px;
+  gap: 1em;
 }
-.imagePostOne .bigImage {
-  padding: 0;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-.postOneTop {
+.mainBox .dateContainer {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 9px;
-  margin-bottom: 8px;
-  margin-left: 20px;
-  /*margin-bottom: 20px;*/
-}
-
-.authorPostOne {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
   flex-direction: row;
-  font-size: 20px;
-  gap: 10px;
+  flex-wrap: nowrap;
+  width: 14em;
+  margin-left: 15px;
+  gap: 1em;
 }
-.authorPostOne .image .authorPostOne_href imh {
-  height: 32px;
-  width: 32px;
-}
-.authorPostOne .avatarImagePostOne {
-  display: inline-block;
-  border-radius: 100%;
-  position: relative;
+.mainBox .dateContainer .imagenProfile {
+  border-radius: 50%;
+  height: 40px;
   width: 40px;
-  height: 40px;
-  overflow: hidden;
-  vertical-align: middle;
 }
-.authorPostOne .authorNamePostOne {
-  display: inline-block;
-  margin-bottom: 0;
-  position: relative;
+.mainBox .dateContainer .pDate {
+  font-size: 13px;
+  font-weight: 300;
+}
+.mainBox .containerH2 {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 75px;
+}
+.mainBox .containerH2 .h2Post {
+  font-size: 34px;
   font-weight: bold;
-  font-size: 17px;
-  text-decoration: none;
-  color: #000;
 }
-
-.postOneBottom {
-  padding-left: 40px;
-}
-.postOneBottom .mainContentTitle h2 {
-  font-size: 1.25rem;
-}
-.postOneBottom .mainContentTitle h2 a {
-  text-align: justify;
-  text-decoration: none;
-  color: black;
-}
-.postOneBottom .mainContentTitle h2 a:hover {
-  color: rgb(57, 57, 228);
-  cursor: pointer;
-}
-.postOneBottom .tagsPostOne {
-  margin-bottom: 17px;
-  margin-left: 10px;
-  font-size: small;
+.mainBox .containerHashtags {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  color: rgb(59, 57, 57);
-  text-decoration: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2em;
+  margin-left: 75px;
 }
-.postOneBottom .tagsPostOne .news {
+.mainBox .containerDown {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  height: 30px;
-  min-width: 70px;
-  text-decoration: none;
-  color: black;
+  flex-direction: row;
+  margin-left: 75px;
 }
-.postOneBottom .tagsPostOne .news:hover {
-  background-color: rgba(86, 39, 101, 0.1);
-  border-radius: 4px;
-  border: 1px solid #2d2a2a;
-}
-
-.engagementsPostOne {
+.mainBox .containerDown .iconsReaction {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.875rem;
+  margin-right: 10px;
 }
-.engagementsPostOne .emojisAndComments {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  margin-left: 10px;
-}
-.engagementsPostOne .emojisAndComments .emojis {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  margin-left: 0.5rem;
-  height: 40px;
-  width: 167px;
-}
-.engagementsPostOne .emojisAndComments .emojis .insideEmoji {
+.mainBox .containerDown .iconsReaction .icons {
   margin: -6px;
   height: 25px;
   width: 25px;
@@ -766,61 +708,146 @@ html {
   border: 2px solid rgb(255, 255, 255);
   background-color: rgb(245, 245, 245);
 }
-.engagementsPostOne .emojisAndComments .emojis .reactionCounter {
-  margin-left: 0.5rem;
+.mainBox .containerDown .commentsContainer {
+  margin-left: 100px;
 }
-.engagementsPostOne .emojisAndComments .emojis .reactionCounter .reactionCounter_2 {
-  display: none;
-}
-.engagementsPostOne .emojisAndComments .emojis:hover {
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.035);
-  border-radius: 0.375rem;
-}
-.engagementsPostOne .emojisAndComments .commentsPostOneDiv {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  margin-left: 0.5rem;
-  height: 40px;
-  width: 40px;
-}
-.engagementsPostOne .emojisAndComments .commentsPostOneDiv .commentsPostOne {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.9em;
-}
-.engagementsPostOne .emojisAndComments .commentsPostOneDiv .commentsPostOne .crayons-icon {
-  margin-right: 5px;
-}
-.engagementsPostOne .emojisAndComments .commentsPostOneDiv .commentsPostOne .commentsPostOneBottom {
-  display: inline;
-  font-size: 0.9em;
-  display: none;
-}
-.engagementsPostOne .emojisAndComments .commentsPostOneDiv:hover {
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.035);
-  border-radius: 0.375rem;
-}
-.engagementsPostOne .savePostOneBottom {
-  display: flex;
-  align-items: center;
-}
-.engagementsPostOne .savePostOneBottom p {
-  margin-right: 15px;
-  font-size: 0.9em;
-}
-.engagementsPostOne .savePostOneBottom button {
-  padding: 2px;
-  background-color: white;
-  border: none;
+.mainBox .containerDown .btnDeleteConteiner {
+  margin-left: auto;
 }
 
-.nameDate p {
-  font-size: 10px;
+.imagen {
+  border-radius: 2px;
+}
+
+.descriptionContent {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.sectionContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 2em;
+}
+
+.btnDelete {
+  width: 3em;
+  height: 3em;
+  border-radius: 5px;
+  border: rgb(228, 225, 228) 2px solid;
+  cursor: pointer;
+}
+.btnDelete:hover {
+  width: 3.2em;
+  height: 3.2em;
+  background: rgb(228, 225, 228);
+  border-radius: 5px;
+  transition: 1s ease-in-out;
+}
+
+.btnDeleteConteiner {
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
+}
+
+.imagButtonDlt {
+  height: 100%;
+  width: 100%;
+}
+
+.noReults {
+  font-size: 20px;
+  text-align: center;
+  display: none;
+}
+
+.containerCalendar {
+  display: flex;
+  border: rgb(228, 225, 228) 2px solid;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+.containerCalendar .btnRefresh {
+  color: red;
+  border: none;
+  margin-top: 12px;
+}
+.containerCalendar .btnRefresh:hover {
+  cursor: pointer;
+}
+.containerCalendar #calendar {
+  border: none;
+  width: 10em;
+  background-color: rgb(245, 245, 245);
+  margin-right: 10px;
+}
+.containerCalendar #calendar:hover {
+  border: none;
+}
+.containerCalendar .imgRefresh {
+  width: 1em;
+  height: 1em;
+}
+
+html,
+body {
+  box-sizing: content-box;
+  scroll-behavior: smooth;
+}
+
+#divContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+  max-width: 70em;
+  height: 50em;
+}
+
+#crud {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border: rgb(228, 225, 228) 2px solid;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  gap: 1em;
+  padding: 50px;
+}
+
+input {
+  height: 40px;
+  width: 60em;
+}
+
+select {
+  height: 40px;
+  width: 30em;
+}
+
+.h1Formulario {
+  color: black;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+#buttomSubmit {
+  color: black;
 }
 
 body {
