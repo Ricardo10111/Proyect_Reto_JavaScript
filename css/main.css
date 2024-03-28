@@ -609,6 +609,38 @@ html {
   font-size: 18px;
 }
 
+.headerPosts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+}
+
+#calendar {
+  height: 3em;
+  width: 20em;
+}
+
+.navMainContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1em;
+  border-radius: 10px;
+  padding: 10px;
+}
+.navMainContent li {
+  list-style: none;
+  padding: 10px;
+  background-color: transparent;
+}
+.navMainContent li:hover {
+  background-color: rgb(255, 255, 255);
+  border-radius: 15%;
+  color: rgb(57, 57, 228);
+  cursor: pointer;
+}
+
 .mainBox {
   display: flex;
   flex-direction: column;
@@ -623,6 +655,64 @@ html {
   position: relative;
   width: 100%;
   margin-bottom: 10px;
+  gap: 1em;
+}
+.mainBox .dateContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 14em;
+  margin-left: 15px;
+  gap: 1em;
+}
+.mainBox .dateContainer .imagenProfile {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+.mainBox .dateContainer .pDate {
+  font-size: 13px;
+  font-weight: 300;
+}
+.mainBox .containerH2 {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 75px;
+}
+.mainBox .containerH2 .h2Post {
+  font-size: 34px;
+  font-weight: bold;
+}
+.mainBox .containerHashtags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2em;
+  margin-left: 75px;
+}
+.mainBox .containerDown {
+  display: flex;
+  flex-direction: row;
+  margin-left: 75px;
+}
+.mainBox .containerDown .iconsReaction {
+  display: flex;
+  margin-right: 10px;
+}
+.mainBox .containerDown .iconsReaction .icons {
+  margin: -6px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(245, 245, 245);
+}
+.mainBox .containerDown .commentsContainer {
+  margin-left: 100px;
+}
+.mainBox .containerDown .btnDeleteConteiner {
+  margin-left: auto;
 }
 
 .imagen {
@@ -649,15 +739,15 @@ html {
 }
 
 .btnDelete {
-  width: 8em;
-  height: 2em;
+  width: 3em;
+  height: 3em;
   border-radius: 5px;
   border: rgb(228, 225, 228) 2px solid;
   cursor: pointer;
 }
 .btnDelete:hover {
-  width: 8.5em;
-  height: 2.5em;
+  width: 3.2em;
+  height: 3.2em;
   background: rgb(228, 225, 228);
   border-radius: 5px;
   transition: 1s ease-in-out;
@@ -669,12 +759,59 @@ html {
   margin-right: 20px;
 }
 
+.imagButtonDlt {
+  height: 100%;
+  width: 100%;
+}
+
+.noReults {
+  font-size: 20px;
+  text-align: center;
+  display: none;
+}
+
+.containerCalendar {
+  display: flex;
+  border: rgb(228, 225, 228) 2px solid;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+.containerCalendar .btnRefresh {
+  color: red;
+  border: none;
+  margin-top: 12px;
+}
+.containerCalendar .btnRefresh:hover {
+  cursor: pointer;
+}
+.containerCalendar #calendar {
+  border: none;
+  width: 10em;
+  background-color: rgb(245, 245, 245);
+  margin-right: 10px;
+}
+.containerCalendar #calendar:hover {
+  border: none;
+}
+.containerCalendar .imgRefresh {
+  width: 1em;
+  height: 1em;
+}
+
+html,
+body {
+  box-sizing: content-box;
+  scroll-behavior: smooth;
+}
+
 #divContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-  margin-top: 10em;
+  margin: auto;
+  max-width: 70em;
+  height: 50em;
 }
 
 #crud {
@@ -683,10 +820,34 @@ html {
   align-content: center;
   align-items: center;
   border: rgb(228, 225, 228) 2px solid;
-  flex-direction: column;
-  height: 30em;
-  width: 30em;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
+  gap: 1em;
+  padding: 50px;
+}
+
+input {
+  height: 40px;
+  width: 60em;
+}
+
+select {
+  height: 40px;
+  width: 30em;
+}
+
+.h1Formulario {
+  color: black;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+#buttomSubmit {
+  color: black;
 }
 
 body {

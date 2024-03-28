@@ -1,4 +1,36 @@
+.headerPosts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+}
 
+#calendar {
+  height: 3em;
+  width: 20em;
+}
+
+.navMainContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1em;
+  border-radius: 10px;
+  padding: 10px;
+
+  li {
+    list-style: none;
+    padding: 10px;
+    background-color: transparent;
+  }
+
+  li:hover {
+    background-color: rgb(255, 255, 255);
+    border-radius: 15%;
+    color: rgb(57, 57, 228);
+    cursor: pointer;
+  }
+}
 .mainBox {
   display: flex;
   flex-direction: column;
@@ -13,9 +45,68 @@
   position: relative;
   width: 100%;
   margin-bottom: 10px;
+  gap: 1em;
+  .dateContainer {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 14em;
+    margin-left: 15px;
+    gap: 1em;
+    .imagenProfile {
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+    }
+    .pDate {
+      font-size: 13px;
+      font-weight: 300;
+    }
+  }
+
+  .containerH2 {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 75px;
+    .h2Post {
+      font-size: 34px;
+      font-weight: bold;
+    }
+  }
+  .containerHashtags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2em;
+    margin-left: 75px;
+  }
+  .containerDown{
+    display: flex;
+    flex-direction: row;
+    margin-left: 75px;
+    .iconsReaction{
+      display: flex;
+      margin-right: 10px;
+      .icons{
+        margin: -6px;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        border: 2px solid rgb( 255, 255, 255 );
+        background-color: rgb( 245, 245, 245 ); 
+      }
+    }
+    .commentsContainer{
+      margin-left: 100px;
+    }
+    .btnDeleteConteiner{
+      margin-left: auto;
+    }
+  }
 }
-.imagen{
- border-radius: 2px;
+.imagen {
+  border-radius: 2px;
 }
 .descriptionContent {
   display: flex;
@@ -26,7 +117,6 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.875rem;
-  
 }
 .sectionContainer {
   display: flex;
@@ -35,25 +125,62 @@
   padding: 20px;
   gap: 2em;
 }
-.btnDelete{
-    width: 8em;
-    height: 2em;
+.btnDelete {
+  width: 3em;
+  height: 3em;
+  border-radius: 5px;
+  border: rgb(228, 225, 228) 2px solid;
+  cursor: pointer;
+  &:hover {
+    width: 3.2em;
+    height: 3.2em;
+    background: rgb(228, 225, 228);
     border-radius: 5px;
-    border: rgb(228, 225, 228) 2px solid;
-    cursor: pointer;
-    &:hover{
-      width: 8.5em;
-      height: 2.5em;
-      background: rgb(228, 225, 228);
-      border-radius: 5px;
 
-      transition: 1s ease-in-out;
-    }
+    transition: 1s ease-in-out;
+  }
 }
 
-.btnDeleteConteiner{
-    display: flex;
-    justify-content: end;
-    margin-right: 20px;
-   
+.btnDeleteConteiner {
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
+}
+.imagButtonDlt {
+  height: 100%;
+  width: 100%;
+}
+.noReults {
+  font-size: 20px;
+  text-align: center;
+  display: none;
+}
+.containerCalendar{
+  display: flex;
+  border: rgb(228, 225, 228) 2px solid;
+  border-radius: 10px;
+  padding: 0 10px;
+
+
+  .btnRefresh{
+    color: red;
+    border: none;
+    margin-top: 12px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  #calendar{
+    border: none;
+    width: 10em;
+    background-color: rgb(245, 245, 245);
+    margin-right: 10px;
+    &:hover{
+      border: none;
+    }
+  }
+  .imgRefresh{
+    width: 1em;
+    height: 1em;
+  }
 }
