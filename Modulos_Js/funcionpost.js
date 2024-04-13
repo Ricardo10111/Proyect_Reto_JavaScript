@@ -23,6 +23,9 @@ export const functionCrear = (place) => {
       posts.push(data)
       localStorage.setItem('posts', JSON.stringify(posts))
       alert('Post añadido exitosamente')
+      // const miVentana = window.open('../index.html')
+      // miVentana.close()
+
       location.reload()
     }
   })
