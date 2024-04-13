@@ -13,7 +13,8 @@ export const filtro = (data, container) => {
   btnRefresh.className = 'btnRefresh'
   const imgRefresh = document.createElement('img')
   imgRefresh.className = 'imgRefresh'
-  imgRefresh.src = '../images/refresh-page-arrow-button_icon-icons.com_53909.ico'
+  imgRefresh.src =
+    '../images/refresh-page-arrow-button_icon-icons.com_53909.ico'
   btnRefresh.append(imgRefresh)
   containerCalendar.append(calendar)
   containerCalendar.append(btnRefresh)

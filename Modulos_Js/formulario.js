@@ -31,10 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     return selectReaction
   }
   // F options
-  const optionsFactory = (info, textN) => {
+  const optionsFactory = (info = '', textN = '', placeHolderN = '') => {
     const options = document.createElement('option')
     options.value = info
     options.textContent = textN
+    options.placeHolder = placeHolderN
     return options
   }
 
@@ -48,43 +49,51 @@ document.addEventListener('DOMContentLoaded', () => {
   formulario
     .appendChild(selectFactory('reacciones'))
     .append(
+      optionsFactory('', ''),
       optionsFactory('❤️', '❤️'),
       optionsFactory('🦄', '🦄'),
       optionsFactory('🤯', '🤯'),
       optionsFactory('🚀', '🚀'),
+      optionsFactory('🔥', '🔥'),
       optionsFactory('🙌', '🙌')
     )
   formulario
     .appendChild(selectFactory('reacciones2'))
     .append(
+      optionsFactory('', ''),
       optionsFactory('❤️', '❤️'),
       optionsFactory('🦄', '🦄'),
       optionsFactory('🤯', '🤯'),
       optionsFactory('🚀', '🚀'),
+      optionsFactory('🔥', '🔥'),
       optionsFactory('🙌', '🙌')
     )
   formulario
     .appendChild(selectFactory('reacciones3'))
     .append(
+      optionsFactory('', ''),
       optionsFactory('❤️', '❤️'),
       optionsFactory('🦄', '🦄'),
       optionsFactory('🤯', '🤯'),
       optionsFactory('🚀', '🚀'),
+      optionsFactory('🔥', '🔥'),
       optionsFactory('🙌', '🙌')
     )
   formulario
     .appendChild(selectFactory('reacciones4'))
     .append(
+      optionsFactory('', ''),
       optionsFactory('❤️', '❤️'),
       optionsFactory('🦄', '🦄'),
       optionsFactory('🤯', '🤯'),
       optionsFactory('🚀', '🚀'),
+      optionsFactory('🔥', '🔥'),
       optionsFactory('🙌', '🙌')
     )
   formulario
     .appendChild(selectFactory('hashtags'))
     .append(
-      optionsFactory('hashtags'),
+      optionsFactory(''),
       optionsFactory('#programming', '#programming'),
       optionsFactory('#kodemia', '#kodemia'),
       optionsFactory('#retoJS', '#retoJS'),
@@ -94,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
   formulario
     .appendChild(selectFactory('hashtags2'))
     .append(
-      optionsFactory('hashtags'),
+      optionsFactory(''),
       optionsFactory('#programming', '#programming'),
       optionsFactory('#kodemia', '#kodemia'),
       optionsFactory('#retoJS', '#retoJS'),
@@ -104,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
   formulario
     .appendChild(selectFactory('hashtags3'))
     .append(
-      optionsFactory('hashtags'),
+      optionsFactory(''),
       optionsFactory('#programming', '#programming'),
       optionsFactory('#kodemia', '#kodemia'),
       optionsFactory('#retoJS', '#retoJS'),
