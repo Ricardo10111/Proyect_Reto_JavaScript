@@ -56,10 +56,7 @@ export const createPosts = (postlist, appendera) => {
     const btnDelete = aFactory(
       'btnDelete',
       '',
-      imgFactory(
-        'imagButtonDlt',
-        '../images/trash_can_rubbish_paper_bin_icon_231279.ico'
-      )
+      imgFactory('imagButtonDlt', '..//logos_svg/trashcan_114640.svg')
     )
     appendera.prepend(
       divFactory(
@@ -68,8 +65,11 @@ export const createPosts = (postlist, appendera) => {
         divFactory(
           'dateContainer',
           imgFactory('imagenProfile', posts.urlImageProfile),
-          pFactory('pName', posts.nombre),
-          pFactory('pDate', posts.fecha)
+          divFactory(
+            'nameDateContainer',
+            pFactory('pName', posts.nombre),
+            pFactory('pDate', posts.fecha)
+          )
         ),
         divFactory('containerH2', h2Factory('h2Post', posts.description)),
         divFactory(
@@ -81,18 +81,23 @@ export const createPosts = (postlist, appendera) => {
         divFactory(
           'containerDown',
           divFactory(
-            'iconsReaction',
-            pFactory('icons', posts.reacciones),
-            pFactory('icons', posts.reacciones2),
-            pFactory('icons', posts.reacciones3),
-            pFactory('icons', posts.reacciones4)
+            'iconsReactionContainer',
+            divFactory(
+              'iconsReaction',
+              pFactory('icons', posts.reacciones),
+              pFactory('icons', posts.reacciones2),
+              pFactory('icons', posts.reacciones3),
+              pFactory('icons', posts.reacciones4)
+            ),
+            divFactory(
+              'containerReactions',
+              pFactory('pNumReactions', `${posts.numberReactions} reactions`)
+            )
           ),
-          divFactory(
-            'containerReactions',
-            pFactory('pNumReactions', `${posts.numberReactions} reactions`)
-          ),
+
           divFactory(
             'commentsContainer',
+            imgFactory('imgComents', '../logos_svg/comments.svg'),
             pFactory('pNumComments', `${posts.numberComments} comments`)
           ),
           divFactory('btnDeleteConteiner', btnDelete)
@@ -101,7 +106,11 @@ export const createPosts = (postlist, appendera) => {
     )
 
     btnDelete.addEventListener('click', () => {
-      deletePost(index)
+      const resultado = window.confirm(
+        'Estas seguro que quieres borrar el post?'
+      )
+      if (resultado) deletePost(index)
+      if (!resultado) alert('Ok no lo borre!')
     })
   })
 

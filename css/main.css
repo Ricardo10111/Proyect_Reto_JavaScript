@@ -660,20 +660,41 @@ html {
 .mainBox .dateContainer {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
   width: 14em;
   margin-left: 15px;
-  gap: 1em;
 }
 .mainBox .dateContainer .imagenProfile {
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  height: 2rem;
+  width: 2rem;
+}
+.mainBox .dateContainer .nameDateContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 .mainBox .dateContainer .pDate {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 300;
+  color: #3d3d3d;
+}
+.mainBox .dateContainer .pName {
+  color: #3d3d3d;
+  font-weight: 400;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.mainBox .dateContainer .pName:hover {
+  transition: 300ms ease-in-out;
+  color: black;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(245, 245, 245);
+  cursor: pointer;
 }
 .mainBox .containerH2 {
   display: flex;
@@ -681,38 +702,165 @@ html {
   margin-left: 75px;
 }
 .mainBox .containerH2 .h2Post {
-  font-size: 34px;
+  font-size: 30px;
   font-weight: bold;
+}
+.mainBox .containerH2 .h2Post:hover {
+  cursor: pointer;
+  color: #3b49df;
 }
 .mainBox .containerHashtags {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 2em;
+  gap: 2px;
   margin-left: 75px;
+}
+.mainBox .containerHashtags .hash1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3d3d3d;
+  font-size: 14.5px;
+  border-radius: 0.375rem;
+  height: 30px;
+  width: 120px;
+}
+.mainBox .containerHashtags .hash1:hover {
+  cursor: pointer;
+  background-color: rgba(59, 73, 223, 0.1);
+  border: 1px solid #3b49df;
+  border-radius: 0.375rem;
+}
+.mainBox .containerHashtags .hash2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3d3d3d;
+  font-size: 14.5px;
+  border-radius: 10px;
+  height: 30px;
+  width: 120px;
+}
+.mainBox .containerHashtags .hash2:hover {
+  cursor: pointer;
+  background-color: rgba(255, 102, 237, 0.1);
+  border: 1px solid #ff66ed;
+  border-radius: 0.375rem;
+}
+.mainBox .containerHashtags .hash3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3d3d3d;
+  font-size: 14.5px;
+  border-radius: 10px;
+  height: 30px;
+  width: 120px;
+}
+.mainBox .containerHashtags .hash3:hover {
+  cursor: pointer;
+  background-color: rgba(42, 7, 152, 0.1);
+  border: 1px solid #2A0798;
+  border-radius: 0.375rem;
 }
 .mainBox .containerDown {
   display: flex;
   flex-direction: row;
-  margin-left: 75px;
+  margin-left: 65px;
 }
-.mainBox .containerDown .iconsReaction {
+.mainBox .containerDown .iconsReactionContainer {
   display: flex;
-  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  height: 40px;
+  width: 200px;
 }
-.mainBox .containerDown .iconsReaction .icons {
-  margin: -6px;
+.mainBox .containerDown .iconsReactionContainer:hover {
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  border-radius: 10px;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(245, 245, 245);
+}
+.mainBox .containerDown .iconsReactionContainer .iconsReaction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+}
+.mainBox .containerDown .iconsReactionContainer .iconsReaction .icons {
+  margin: -2.5px;
+  margin-bottom: 5px;
   height: 25px;
   width: 25px;
   border-radius: 50%;
   border: 2px solid rgb(255, 255, 255);
   background-color: rgb(245, 245, 245);
 }
+.mainBox .containerDown .iconsReactionContainer .containerReactions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+}
+.mainBox .containerDown .iconsReactionContainer .containerReactions .pNumReactions {
+  color: #3d3d3d;
+  font-size: 14.5px;
+}
 .mainBox .containerDown .commentsContainer {
-  margin-left: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 150px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.mainBox .containerDown .commentsContainer:hover {
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  border-radius: 10px;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(245, 245, 245);
+}
+.mainBox .containerDown .commentsContainer .pNumComments {
+  color: #3d3d3d;
+  font-size: 14.5px;
+}
+.mainBox .containerDown .commentsContainer .imgComents {
+  width: 25px;
+  height: 22px;
+  margin-right: 10px;
 }
 .mainBox .containerDown .btnDeleteConteiner {
+  display: flex;
+  justify-content: end;
+  align-items: center;
   margin-left: auto;
+  margin-right: 20px;
+}
+.mainBox .containerDown .btnDeleteConteiner .btnDelete {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.mainBox .containerDown .btnDeleteConteiner .btnDelete:hover {
+  width: 3.2em;
+  height: 3.2em;
+  border-radius: 5px;
+  transition: 1s ease-in-out;
+}
+.mainBox .containerDown .btnDeleteConteiner .imagButtonDlt {
+  height: 100%;
+  width: 100%;
 }
 
 .imagen {
@@ -736,32 +884,6 @@ html {
   flex-wrap: wrap;
   padding: 20px;
   gap: 2em;
-}
-
-.btnDelete {
-  width: 3em;
-  height: 3em;
-  border-radius: 5px;
-  border: rgb(228, 225, 228) 2px solid;
-  cursor: pointer;
-}
-.btnDelete:hover {
-  width: 3.2em;
-  height: 3.2em;
-  background: rgb(228, 225, 228);
-  border-radius: 5px;
-  transition: 1s ease-in-out;
-}
-
-.btnDeleteConteiner {
-  display: flex;
-  justify-content: end;
-  margin-right: 20px;
-}
-
-.imagButtonDlt {
-  height: 100%;
-  width: 100%;
 }
 
 .noReults {
